@@ -1,0 +1,410 @@
+/* Hole Page Style : */
+* {
+  padding: 0;
+  margin: 0;
+}
+/* Main Container Style :  */
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-image: url(imgs/avaamo_backgroundImg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* First Main Container Style :  */
+.firstMainContainer {
+  width: 50vw;
+}
+/* Chat Bot Section : Second Main Container */
+.secondMainContainer {
+  width: 50vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.botMainContainer {
+  background-color: white;
+  opacity: 0.7;
+  width: 450px;
+  height: 500px;
+  margin: 0px 20px 80px 0px;
+  border-radius: 20px;
+  animation-name: botMainContainerAnim;
+  animation-duration: 1s;
+  display: none;
+}
+
+@keyframes botMainContainerAnim {
+  from {
+    width: 0px;
+    height: 0px;
+    margin: 0px 0px 0px 0px;
+  }
+  to {
+    width: 450px;
+    height: 500px;
+    margin: 0px 20px 80px 0px;
+  }
+}
+
+/* Chat bot NavBar Section : */
+.navbarBotMainContainer {
+  background-color: #03bddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px 10px 0px 0px;
+  height: 10%;
+}
+
+.navbarBotTitle {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.navbarBotControls {
+  font-size: 25px;
+  padding: 20px;
+}
+
+.navbarBotControls i {
+  padding: 0px 7px;
+  border: 2px solid black;
+  font-weight: bold;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.navbarBotControls i:hover {
+  color: white;
+  background-color: red;
+}
+
+/* Chat Bot Body Section : */
+.bodyBotMainContainer {
+  height: 75%;
+  margin: 5px;
+  overflow-y: scroll;
+}
+
+.bodyBotAnswerSectionDiv {
+  display: flex;
+  justify-content: flex-start;
+
+  margin-left: 10px;
+}
+
+.bodyUserAnswerSectionDiv {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-right: 10px;
+}
+
+.bodyBotAnswerSectionP {
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 2px;
+  margin-top: 5px;
+  border: 2px solid black;
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+/* Chat Bot Footer Section : */
+.footerBotForm {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 10%;
+  padding-left: 5px;
+}
+
+.footerBotMainContainer input {
+  width: 80%;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.footerBotMainContainer Button {
+  width: 10%;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.footerBotMainContainer Button :hover {
+  color: red;
+  font-size: 35px;
+}
+
+.footerBotMicBtn {
+  width: 10%;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.footerBotMicBtn:hover {
+  font-size: 35px;
+  color: red;
+}
+
+/* Chat Bot Icon Section : */
+.botIconContainer {
+  margin: 0px 50px 50px 0px;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.botIconContainerMovementClass {
+  animation-name: botIconContainerMovement;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Responsive Section : */
+@keyframes botIconContainerMovement {
+  0% {
+    color: yellow;
+    font-size: 50px;
+  }
+  30% {
+    color: red;
+    font-size: 60px;
+  }
+  60% {
+    color: rgb(121, 215, 121);
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainContainer {
+    background-size: cover;
+  }
+  .firstMainContainer {
+    width: 45vw;
+  }
+  .secondMainContainer {
+    width: 55vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .mainContainer {
+    background-size: cover;
+  }
+  .firstMainContainer {
+    width: 40vw;
+  }
+  .secondMainContainer {
+    width: 60vw;
+  }
+  .botMainContainer {
+    width: 450px;
+    height: 450px;
+    margin: 0px 20px 70px 0px;
+    border-radius: 20px;
+  }
+  .botIconContainer {
+    margin: 0px 40px 40px 0px;
+    font-size: 40px;
+  }
+
+  @keyframes botIconContainerMovement {
+    0% {
+      color: yellow;
+      font-size: 30px;
+    }
+    30% {
+      color: red;
+    }
+    60% {
+      color: rgb(121, 215, 121);
+      font-size: 50px;
+    }
+  }
+
+  @keyframes botMainContainerAnim {
+    from {
+      width: 0px;
+      height: 0px;
+      margin: 0px 0px 0px 0px;
+    }
+    to {
+      width: 400px;
+      height: 450px;
+      margin: 0px 20px 70px 0px;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .mainContainer {
+    background-size: cover;
+  }
+  .firstMainContainer {
+    width: 20vw;
+  }
+  .secondMainContainer {
+    width: 80vw;
+  }
+  .botMainContainer {
+    width: 400px;
+    height: 350px;
+    margin: 0px 10px 50px 0px;
+    border-radius: 20px;
+  }
+  .botIconContainer {
+    margin: 0px 20px 20px 0px;
+    font-size: 30px;
+  }
+
+  @keyframes botIconContainerMovement {
+    0% {
+      color: yellow;
+      font-size: 30px;
+    }
+    30% {
+      color: red;
+    }
+    60% {
+      color: rgb(121, 215, 121);
+      font-size: 50px;
+    }
+  }
+
+  @keyframes botMainContainerAnim {
+    from {
+      width: 0px;
+      height: 0px;
+      margin: 0px 0px 0px 0px;
+    }
+    to {
+      width: 400px;
+      height: 350px;
+      margin: 0px 20px 70px 0px;
+    }
+  }
+
+  .footerBotMainContainer input {
+    font-size: 20px;
+    padding: 4px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .mainContainer {
+    background-size: cover;
+  }
+  .firstMainContainer {
+    width: 10vw;
+  }
+  .secondMainContainer {
+    width: 90vw;
+  }
+  .botMainContainer {
+    width: 400px;
+    height: 350px;
+    margin: 0px 5px 30px 0px;
+    border-radius: 20px;
+  }
+  .botIconContainer {
+    margin: 0px 10px 10px 0px;
+    font-size: 20px;
+  }
+
+  @keyframes botIconContainerMovement {
+    0% {
+      color: yellow;
+      font-size: 15px;
+    }
+    30% {
+      color: red;
+    }
+    60% {
+      color: rgb(121, 215, 121);
+      font-size: 25px;
+    }
+  }
+
+  @keyframes botMainContainerAnim {
+    from {
+      width: 0px;
+      height: 0px;
+      margin: 0px 0px 0px 0px;
+    }
+    to {
+      height: 350px;
+      width: 400px;
+      margin: 0px 10px 30px 0px;
+    }
+  }
+
+  .footerBotMainContainer input {
+    font-size: 18px;
+    padding: 2px;
+  }
+}
+@media screen and (max-width: 290px) {
+  .firstMainContainer {
+    width: 0vw;
+  }
+  .secondMainContainer {
+    width: 100vw;
+  }
+  .botMainContainer {
+    width: 350px;
+    height: 300px;
+    margin: 0px 2px 30px 0px;
+    border-radius: 20px;
+  }
+  .botIconContainer {
+    margin: 0px 10px 10px 0px;
+    font-size: 15px;
+  }
+
+  @keyframes botIconContainerMovement {
+    0% {
+      color: yellow;
+      font-size: 10px;
+    }
+    30% {
+      color: red;
+    }
+    60% {
+      color: rgb(121, 215, 121);
+      font-size: 15px;
+    }
+  }
+
+  @keyframes botMainContainerAnim {
+    from {
+      width: 0px;
+      height: 0px;
+      margin: 0px 0px 0px 0px;
+    }
+    to {
+      height: 300px;
+      width: 300px;
+      margin: 0px 5px 10px 0px;
+    }
+  }
+
+  .footerBotMainContainer input {
+    font-size: 20px;
+    padding: 2px;
+  }
+}
